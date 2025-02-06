@@ -1,0 +1,12 @@
+pipeline {
+  agent {
+    docker { image 'python:3.9-alpine' } // Use Python image
+  }
+  stages {
+    stage('Run Python Script') {
+      steps {
+        sh 'python3 main.py' // Run the script
+      }
+    }
+  }
+}
